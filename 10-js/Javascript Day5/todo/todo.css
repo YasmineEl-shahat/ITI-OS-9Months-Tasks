@@ -1,0 +1,25 @@
+table {
+  width: 300px;
+  margin-top: 20px;
+}
+
+table tr:nth-child(odd) {
+  background-color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #bbb6b6;
+}
+
+table > tbody > tr:first-child {
+  background-color: red;
+  color: white;
+}
+
+.selected {
+  text-decoration: line-through;
+}
+.selectedelem,
+.deletbtn {
+  cursor: pointer;
+}

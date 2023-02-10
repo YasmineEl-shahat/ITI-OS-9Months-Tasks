@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Slider</title>
+    <style>
+      div {
+        width: 400px;
+        height: 250px;
+        background-color: rgb(182, 229, 241);
+        margin: 5px auto;
+        padding: 5px;
+        border-radius: 30px;
+        text-align: center;
+      }
+
+      img {
+        width: 250px;
+        height: 150px;
+        margin: 20px auto;
+        border: rgb(182, 241, 205) 3px solid;
+        border-radius: 50%;
+        display: block;
+      }
+
+      input {
+        background-color: rgb(144, 188, 238);
+        border: rgb(182, 241, 205) 3px solid;
+        border-radius: 30px;
+        color: rgba(139, 19, 45, 0.747);
+        padding: 0 20px 0 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <img src="../Demos/images/1.jpg" />
+      <input type="button" value="Start" />
+      <input type="button" value="Pause" onclick="StopSlider(itervalId);" />
+      <input type="button" value="next" onclick="ChangeImage();" />
+      <input type="button" value="prev" onclick="prevImg();" />
+    </div>
+    <script>
+      var Counter = 0;
+      function ChangeImage() {
+        _MyImg = document.images[0];
+        Counter++;
+        if (Counter > 8) {
+          Counter = 1;
+        }
+        _MyImg.src = "../Demos/images/" + Counter + ".jpg";
+      }
+      function prevImg() {
+        Counter--;
+        if (Counter < 1) {
+          Counter = 8;
+        }
+        _MyImg.src = "../Demos/images/" + Counter + ".jpg";
+      }
+      function StartSlider(_MyImg) {
+        let slide = setInterval(function () {
+          Counter++;
+          if (Counter > 8) {
+            Counter = 1;
+          }
+          _MyImg.src = "../Demos/images/" + Counter + ".jpg";
+        }, 1000);
+        return slide;
+      }
+      function StopSlider(timerID) {
+        clearInterval(timerID);
+      }
+
+      document.querySelector("input").onclick = function () {
+        itervalId = StartSlider(document.images[0]);
+      };
+    </script>
+  </body>
+</html>

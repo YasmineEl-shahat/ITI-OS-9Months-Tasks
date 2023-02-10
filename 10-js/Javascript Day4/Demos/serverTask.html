@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Serever</title>
+  </head>
+
+  <body>
+    <script>
+      var Data = location.search.split("&");
+      var tab =
+        "<table border='1' bgcolor='lightgray' align='center' cellpadding=5 cellspacing=5 ><tr><th>Name</th><th>Age</th><tr>";
+      for (var i = 0; i < Data.length; i++) {
+        tab += "<td>" + Data[i].split("=")[1] + "</td>";
+      }
+      tab.fontcolor("blue").fontsize(3);
+      tab += "</tr></table>";
+      document.write(tab);
+    </script>
+  </body>
+</html>
