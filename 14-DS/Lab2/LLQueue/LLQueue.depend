@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1672652394 source:e:\iti\9months\14-ds\lab2\llqueue\main.cpp
+	<iostream>
+	<string.h>
+
