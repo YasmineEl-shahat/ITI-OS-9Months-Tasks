@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <script src="JS/jquery-3.6.3.js"></script>
+    <script src="JS/list.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #333;
+      }
+
+      main {
+        width: 500px;
+        margin: 50px auto;
+      }
+
+      main > section {
+        display: flex;
+      }
+
+      main > section:not(:nth-of-type(2)) {
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+      }
+
+      main > section:nth-of-type(2) > div {
+        flex-basis: 100%;
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+
+      main > section:nth-of-type(2) > div:first-of-type {
+        border-right-width: 0;
+      }
+
+      main > section:nth-of-type(2) ul {
+        list-style: none;
+      }
+
+      main > section:nth-of-type(2) ul li {
+        transition: background-color, color 0.2s;
+        border: 1px solid rgba(204, 204, 204, 0.7);
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      main > section:nth-of-type(2) ul li:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      main > section:nth-of-type(2) ul li.selected {
+        background-color: steelblue;
+        color: white;
+      }
+
+      input,
+      button {
+        padding: 7px 15px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #ccc;
+      }
+
+      form,
+      input {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      button {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="form">
+        <!-- <form> -->
+        <input
+          id="newItem"
+          type="text"
+          name="name"
+          required
+          placeholder="Course Name"
+        />
+        <!-- </form> -->
+      </section>
+      <section>
+        <div>
+          <ul id="list1">
+            <li>JS</li>
+            <li>JQuery</li>
+            <li>Angular</li>
+            <li>HTML</li>
+          </ul>
+        </div>
+        <div>
+          <ul id="list2">
+            <li>CSS</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <button id="to-list1">&lt;</button>
+        <button id="to-list2">&gt;</button>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Page</title>
+    <script src="JS/jquery-3.6.3.js"></script>
+    <script src="JS/news.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #333;
+        font-family: sans-serif;
+      }
+
+      #container {
+        width: 500px;
+        margin: 0 auto;
+        padding: 30px 0;
+      }
+
+      .head {
+        margin-bottom: 10px;
+      }
+
+      .art textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 15px;
+        min-height: 150px;
+        resize: none;
+      }
+
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 15px 0;
+        cursor: pointer;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input[name="search"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      article {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      article .type {
+        padding: 3px 7px;
+        background-color: steelblue;
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      article > div:last-of-type {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      article > div:last-of-type > button {
+        width: auto;
+        display: inline-block;
+        background-color: firebrick;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <!-- <form> -->
+      <div
+        style="
+          border-bottom: 1px solid #ccc;
+          margin: 15px auto;
+          padding-bottom: 15px;
+        "
+      >
+        <p class="head">News Type:</p>
+        <div>
+          <label>
+            <input type="radio" checked value="Sport" name="type" />
+            <span>Sport</span>
+          </label>
+          <label>
+            <input type="radio" value="Social" name="type" />
+            <span>Social</span>
+          </label>
+          <label>
+            <input type="radio" value="Politic" name="type" />
+            <span>Politic</span>
+          </label>
+        </div>
+      </div>
+      <div class="art">
+        <p>Add New Article:</p>
+        <textarea
+          id="newTxt"
+          required
+          name="article"
+          type="text"
+          placeholder="add the article"
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit">Add Article</button>
+      </div>
+      <!-- </form> -->
+      <div>
+        <input
+          type="text"
+          placeholder="Filter By Name"
+          name="search"
+          id="search"
+        />
+      </div>
+      <div id="articles">
+        <h1>Articles</h1>
+      </div>
+    </section>
+  </body>
+</html>

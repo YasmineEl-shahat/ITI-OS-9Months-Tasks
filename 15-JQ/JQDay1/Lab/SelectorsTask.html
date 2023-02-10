@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .active {
+        background-color: yellow;
+        border: 2px solid blue;
+        margin: 5px auto;
+      }
+    </style>
+    <script src="Js/jquery-3.6.3.js"></script>
+    <script src="Js/Selectors.js"></script>
+  </head>
+  <body>
+    <h1>Basic JQuery Selectors</h1>
+    <p>Selectors are used to fetch page elements inside jquery Array</p>
+    <p>They Use CSS-Like Syntax as follow</p>
+    <ul>
+      <li class="a">
+        <code>$("<i>tag</i>")</code>: Select all of the &lt;tag&gt; elements
+      </li>
+      <li class="a">
+        <code>$("<i>.className</i>")</code>: Select all elements that have the
+        <i>className</i> class applied
+      </li>
+      <li class="b">
+        <code>$("#identifier")</code>: Select the element with the id of
+        <i>identifier</i>
+      </li>
+      <li class="b">
+        <code>$("<i>tag.className</i>")</code>: Select all &lt;tag&gt; elements
+        that have the <i>className</i> class applied
+      </li>
+    </ul>
+    <input type="button" value="_AddClass" id="_AddClass" />
+    <h1>jQuery Hierarchy Selectors</h1>
+    <p>
+      To select elements based on their position in the document tree, use the
+      Hierarchy Selectors.
+    </p>
+    <p>
+      The Hierarchy Selectors work by examining the position of target elements
+      relative to other elements:
+    </p>
+    <ol>
+      <li>
+        <code>$("parent > child")</code>: selects "child" elements that are
+        immediate descendants of the "parent"
+      </li>
+      <li>
+        <code>$("ancestor descendant")</code>: selects "descendant" elements as
+        long as they have an "ancestor" element somewhere above them
+      </li>
+      <li>
+        <code>$("prev + next")</code>: selects the "next" element if it is
+        immediately preceded by a "prev" element
+      </li>
+      <li>
+        <code>$("prev ~ siblings")</code>: selects all "siblings" elements that
+        come after a "prev" element
+      </li>
+    </ol>
+    <input type="button" value="changeolContent" id="_btn" />
+    <div id="example">
+      <a><p class="a b">This is paragraph 1</p></a>
+      <p id="para2">This is paragraph 2</p>
+      <p class="a">This is paragraph 3 <span> this is span 1</span></p>
+      <span> <p id="para4">This is paragraph 4</p></span>
+    </div>
+    <img src="images/1.jpg" />
+    <img src="images/2.jpg" />
+
+    <input type="text" value="Type your name here" id="txtName" /><br />
+    <input type="text" value="Type your Age here" id="txtAge" /><br />
+    <input type="button" value="AddnewTrWithInputTextvalue" id="_insertTR" />
+
+    <h3 id="example">HTML Table 1</h3>
+
+    <table id="_tbl">
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+      <tr>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+      </tr>
+      <tr>
+        <td>Cell 5</td>
+        <td>Cell 6</td>
+      </tr>
+    </table>
+    <div>Test Data</div>
+    <div style="width: 200px; height: 150px"></div>
+    <h3>HTML Table 2</h3>
+
+    <table>
+      <tr>
+        <td><a href="http://www.iti.gov.eg" lang="en-us"> ITI </a></td>
+        <td>Cell 2</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.google.com" lang="ar-sa"> google </a></td>
+        <td>Cell 4</td>
+      </tr>
+      <tr>
+        <td><a href="next.html"> MyPage </a></td>
+        <td>Cell 6</td>
+      </tr>
+    </table>
+
+    <h3>HTML Form</h3>
+    <form name="regForm">
+      <fieldset>
+        <legend>Filters Form</legend>
+        <input type="text" name="_okType" value="Type your name here" />
+        <br />
+        <input type="text" name="okkkk" value="Type your age" />
+        <br />
+        Agree <input type="checkbox" value="1" checked />
+        <input type="button" value="send" />
+      </fieldset>
+    </form>
+
+    <input type="text" value="Type your name here" />
+
+    <input type="text" value="Type your name here" />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

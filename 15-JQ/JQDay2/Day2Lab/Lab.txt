@@ -1,0 +1,5 @@
+1-create your owne fake server for array of employees with prop(id,Name,Age,Salary)
+2-make ajax for get all employees data and display at table with css design
+3- create html form page to add new employee with validation this form (id field accept number only ,age must be between 20 and mke 60)
+4- creat anthor form for edite selected employee data 
+5- select emp from first page which display all emp and remove it ,befor remove confirm from user 

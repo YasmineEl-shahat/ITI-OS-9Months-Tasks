@@ -1,0 +1,11 @@
+
+
+1- open the folder you will find a lab.pdf has group of selectors apply it on the html page
+
+2- html page has form, input values and add tr (adding form)
+
+3- div colors (on click → create the same object any number of times)
+
+4-div color (on click (only one item))
+
+5- show hidden element (appear for 1 sec and hide it again) ==> applied on hidden divs (visibility filter file )
