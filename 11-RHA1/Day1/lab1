@@ -1,0 +1,51 @@
+2. What is the difference between cat and more command?
+cat command deal with small files(if the file is large ,that command'll give discriptive content file) 
+while more command show all the content even if the file was large.
+3. What is the difference between rm and rmdir using man?
+rm removes each specified file.
+By default, it does not remove directories
+while,rmdir Remove the DIRECTORY(ies), if they are empty.
+4. Create the following hierarchy under your home directory:
+dir1
+dir11
+docs
+dir12
+mycv
+file1
+sudo mkdir -p dir1
+cd /home/dir1
+sudo mkdir dir11
+sudo mkdir dir12
+cd /home/dir1/dir11
+sudo touch file1
+a. Remove dir11 in one-step. What did you notice? And how did you overcome that?
+failed to remove(dir isn't empty) , use (sudo rm -r dir11)
+b. Then remove dir12 using rmdir –p command. State what happened to the
+hierarchy (Note: you are in your home directory).
+its parent has been removed
+c. The output of the command pwd was /home/user. Write the absolute
+and relative path for the file mycv
+/home/user absolute path
+/docs/mycv relative path
+5. Copy the /etc/passwd file to your home directory making its name is mypasswd.
+sudo cp -i /etc/passwd /home
+sudo mv -i /home/passwd mypasswd
+6. Rename this new file to be oldpasswd.
+sudo mv -i /home/mypasswd oldpasswd
+7. You are in /usr/bin, list four ways to go to your home directory
+cd ../../home
+cd 
+cd ~/../
+cd /home
+8. List Linux commands in /usr/bin that start with letter w
+ls w*
+9. Display the first 4 lines of /etc/passwd
+head -4 /etc/passwd
+10.Display the last 7 lines of /etc/passwd
+tail -7 /etc/passwd
+11.Display the man pages of passwd the command and the file sequentially in one command.
+man -a passwd
+12.Display the man page of the passwd file.
+man -s5 passwd
+13.Display a list of all the commands that contain the keyword passwd in their man page.
+man -k passwd
