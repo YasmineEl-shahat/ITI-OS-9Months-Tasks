@@ -1,0 +1,8 @@
+branch(#id, address,  mgr_id fk U)
+branch_contact(#id, #contact_no.)
+staff(#id, name, age, city, region, role, join_date, salary, branch_id fk)
+menu_item(#code, name, price, category, branch_id fk, order_id fk)
+orders(#id, address, bill, date, customer_code fk)
+customer(#code, name)
+customer_contact(#code, #contact_no)
+delivery(#name, #contact_no, branch_id fk)

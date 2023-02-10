@@ -1,0 +1,41 @@
+-- 1
+-- INSERT INTO employee VALUES ('Yasmine', 'El-shahat', 102672, '1999-08-01', 'Mansoura', 'f', 20000, 112233, 30);
+-- 2
+--INSERT INTO employee(fname, lname, ssn, bdate, address, sex, dno) VALUES ('Adele', 'El-shahat', 102660, '1999-08-01', 'Mansoura', 'f', 30);
+-- 3
+-- insert  into departments values ('DEPT IT', 100, 112233, '2006-11-1');
+-- 4
+-- update departments set mgrssn = 968574 where dnum = 100 ;
+-- update departments set mgrssn = 102672 where dnum = 20 ;
+-- update employee set superssn = 102672 where ssn = 102660 ;
+-- 5
+-- delete from dependent where essn = 223344;
+-- select * from departments where mgrssn = 223344;
+-- update departments set mgrssn = 102660 where mgrssn = 223344;
+--  select * from employee where superssn = 223344;
+--  update employee set superssn = 102660 where superssn = 223344;
+-- select * from works_for where essn = 223344;
+-- update works_for set essn = 102660 where essn = 223344;
+-- delete from employee where ssn = 223344;
+-- select * from departments;
+-- 6
+-- update employee set salary = salary + salary * 0.2 where  ssn = 102672;
+--  7)
+-- 1
+-- select * from employee;
+-- 2
+-- select fname, lname, salary , dno from employee;
+-- 3
+-- select pname, plocation, dnum from project;
+-- 4
+-- select concat(fname,' ', lname) as "Full Name" , salary * .1 as "ANNUAL COMM" from employee;
+-- 5
+-- select ssn, fname from employee where salary > 1000;
+-- 6
+-- select ssn, fname from employee where salary * 12 > 10000;
+-- 7
+--  select fname, salary from employee where UPPER(sex)='F';
+-- 8
+-- select dnum, dname from departments where mgrssn = 968574;
+-- 9
+select pnumber, pname, plocation from project where dnum = 10;

@@ -1,0 +1,7 @@
+office(#id, address)
+office_phones(#id, #phone)
+owner(#id, name, bank_account, office_id fk)
+car(#id, brand, model_name, model_year, license_image, rent_value, status, owner_id fk, tenant_id fk)
+tenant(#id, driving_licens)
+tenant_phones(#id, #phones)
+transaction(#id, #date ,duration, payment_method)

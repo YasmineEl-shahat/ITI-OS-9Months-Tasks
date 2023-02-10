@@ -1,0 +1,8 @@
+branch(#code, name, floor_number, city, area, street, building_no, mgr_id fk U)
+test(#code, name, cost, duration, branch_code fk)
+test_condition(#code, #condition)
+patient(#id, name, date_of_birth, gender)
+patient_disaster(#id, #chronic_disaster)
+patient_phone(#id, #phone)
+Patient_test(#test_code, #patient_id, #branch_code, time, date)
+Employees(#id, name, salary, team, starting_date, ending_date, branch_code fk, supervised_by fk)

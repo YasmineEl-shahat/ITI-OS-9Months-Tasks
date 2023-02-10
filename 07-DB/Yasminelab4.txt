@@ -1,0 +1,48 @@
+##DreamHome
+> Zero NF: 
+Customer_rental (#C-no, C-name, Pro-no, Pro-add, Rent-start, Rent-finish, Rent, O-no, O-name)
+-----------------------------------
+> 1nf {Multi values attributes - Composite attributes - Repeating Groups (Multi Values + related attributes ) }
+
+1-Repeating Groups in a separate table
+Customer_rental (#C-no, C-name)
+customer_product(#C-no (f.k), #Pro-no, Pro-add, Rent-start, Rent-finish, Rent, O-no, O-name)
+-----------------------------------
+> 2nf { Partial dependency = attribute depend Partially on composite key attribute }
+
+Customer_rental (#C-no, C-name)
+customer_product(#C-no (f.k), #Pro-no(f.k), Rent-start, Rent-finish, Rent)
+product(#Pro-no,  Pro-add, O-no, O-name)
+
+-----------------------------------
+> 3nf{ Transitive [ Fake dependency ] :> Attribute depend on a NON Key Attribute }
+
+Customer_rental (#C-no, C-name)
+customer_product(#C-no (f.k), #Pro-no(f.k), Rent-start, Rent-finish, Rent)
+product(#Pro-no,  Pro-add, O-no(f.k))
+owner(#O-no, O-name)
+
+---------------------------------------------------------------------------------------------------------
+##organization projects
+> Zero NF: 
+Proj(#P-no, p-name, emp-no, emp-name, j-class, C/hour, hours)
+-----------------------------------
+> 1nf {Multi values attributes - Composite attributes - Repeating Groups (Multi Values + related attributes ) }
+Proj(#P-no, p-name)
+-Repeating Groups
+projEmp(#P-no(f.k), #emp-no, emp-name,  j-class, C/hour, hours)
+
+
+-----------------------------------
+> 2nf { Partial dependency = attribute depend Partially on composite key attribute }
+Proj(#P-no, p-name)
+projEmp(#P-no(f.k), #emp-no(f.k), hours)
+Emp(#emp-no, emp-name, j-class, C/hour)
+
+-----------------------------------
+> 3nf{ Transitive [ Fake dependency ] :> Attribute depend on a NON Key Attribute }
+
+Proj(#P-no, p-name)
+projEmp(#P-no(f.k), #emp-no(f.k), hours)
+Emp(#emp-no, emp-name, j-class(f.k))
+class(#j-class, C/hour)
