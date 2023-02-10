@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  margin: 100px 200px;
+}
+.about img {
+  margin-right: 80px;
+}
+.about h2 {
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about h4 {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+p {
+  color: darkgray;
+}

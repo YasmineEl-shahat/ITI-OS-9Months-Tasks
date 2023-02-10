@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE family SYSTEM "E:\Front-end\ITI\9months\xml\XML-D01\Lab\family.dtd">
+<family>
+	<grandfather>
+		<father job="Doctor">
+			<mother/>
+			<daughter job="Accountant"  age="20"/>
+			<son age="23" sport="tennis"  />
+		</father>
+		<uncle/>
+		<uncle/>
+		<aunt sons="5" />
+	</grandfather>
+</family>

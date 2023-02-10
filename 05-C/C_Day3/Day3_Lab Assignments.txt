@@ -1,0 +1,21 @@
+Day 3:
+======
+
+Answer the following questions:
+--------------------------------
+1- one Dim Array ( take data from user , calc sum , max , min , search )
+
+2- C Program to take an array elements from user, then print them out "using 2 for loops". (Print Array)
+
+3- C Program to Claculate Sum of each row in a 2D Array. (3 std, 4 subjects), avg of each column.
+
+
+Answer "as much as you can" from the following:
+------------------------------------------------
+
+
+- C Program to add two matrix and put the result in a third one, then print the result.
+
+- try to implement jagged-Array (without using pointers)
+- max distance between the same data in array
+

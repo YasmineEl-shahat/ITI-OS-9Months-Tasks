@@ -1,0 +1,57 @@
+PRESIDENT, UNIVERSITY_NAME, DATE ,OFFICERS TITLE, PROVOSTS TITLE, ONEOFFICER ,ONEPROVOST, SCHOOLS TITLE, ONESCHOOL, 
+THE_SCHOOL, DEPARTMENT, DEPTHEAD, DEPTNAME, MAJOR, MAJ_COURSES, MINOR, MIN_COURSES{
+	display:block;
+}
+UNIVERSITY_NAME, DATE, SCHOOLS TITLE, THE_SCHOOL{
+	text-align: center;
+}
+UNIVERSITY_NAME{
+	font-size:70px;
+	margin :  0 200px;
+}
+DATE{
+	color: red;
+	border: 3px solid darkred;
+	margin-top :  50px ;
+	font-size:20px;
+	padding: 3px
+}
+
+PRESIDENT, SCHOOLS TITLE, , DEPARTMENT{
+	margin: 20px 0;
+}
+
+OFFICERS TITLE, PROVOSTS TITLE{
+	color: green;
+}
+
+PROVOSTS TITLE{
+	margin-top :  15px ;
+}
+
+ONEOFFICER ,ONEPROVOST{
+	color:blue;
+    font-style: italic;
+	margin-bottom: 5px;
+}
+
+SCHOOLS TITLE, THE_SCHOOL{
+	color: red;
+	font-size:20px;
+}
+ONESCHOOL{
+	line-height: 30px;
+}
+
+THE_SCHOOL{
+	margin:50px 0 20px 0;
+}
+
+ DEPARTMENT{
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+	margin: 20px ;
+    font-style: italic;
+}

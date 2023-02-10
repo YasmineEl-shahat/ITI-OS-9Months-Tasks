@@ -1,0 +1,34 @@
+Day 5:
+======
+
+Answer the following questions:
+--------------------------------
+
+1- Write a function takes 3 numbers as parameter, and returns the largest one among them... write a program to test it.
+2- factorial
+3-power(x,y)
+
+4- C Program to take single Employee's information(ID, Name, Salary, Bonus, Deduction)
+, and display his Id, name along with his net salary. (Emp_Struct)
+
+3- C Program to take information of Array of 5 Employees, then display their data. (EmpArr_of_Struct)
+
+4- Employee with Functions (try to divide Ass#2 into 2 functions): 
+	void DisplayEmployee(struct Employee); 
+
+5- Employee with functions and Highlight Menu: Menu of Array_Of_Struct 
+	
+(Menu will be like:)
+		New
+		SearchById
+		SearchByName
+		Display
+		Exit
+
+
+
+Answer "as much as you can" from the following:
+------------------------------------------------
+
+
+7- Struct inside struct (Dept has id, name, and Multiple Employees)

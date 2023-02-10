@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1668869145 source:e:\iti\9months\05-c\c_day6\texteditor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+
+1667504335 source:e:\iti\9months\05-c\c_day4\receive&displaystring\main.c
+	<stdio.h>
+	<stdlib.h>
+

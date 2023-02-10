@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+input {
+  padding: 10px;
+}
+.main {
+  padding: 10px 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #262626 !important;
+}
+.brand {
+  font-family: cursive;
+  font-size: 36px;
+  color: green;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.item {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 20px;
+  color: #ddd;
+}
+.footer {
+  background-color: #262626 !important;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 0;
+}
+.footer > div {
+  margin: 0 100px;
+}
+.footer > div h3 {
+  color: green;
+  line-height: 50px;
+  font-weight: 100;
+}
+.footer > div p {
+  line-height: 30px;
+}
+.banner {
+  text-align: center;
+  padding: 200px 0;
+  background-image: url("../images/intro-bg.jpg");
+  background-size: cover;
+  color: white;
+}
+.banner h1 {
+  font-family: cursive;
+  font-size: 60px;
+  line-height: 100px;
+}
+.banner p {
+  font-size: 30px;
+  line-height: 70px;
+  margin-bottom: 50px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  background-color: green;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 40px 0;
+}
+.menu h3 {
+  text-align: center;
+}
+.menu > div {
+  width: 500px;
+  margin: 0 50px;
+}
+.menu .price {
+  border-bottom: 1px dotted lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+.menu p {
+  color: gray;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.menu h3 {
+  font-weight: 200;
+  font-size: 20px;
+  margin: 40px 0;
+}
+.menu-header {
+  background: url("../images/menu-bg.jpg") center center no-repeat fixed;
+  background-size: cover;
+  filter: brightness(50%);
+
+  height: 250px;
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+.menu-header h2 {
+  width: 100%;
+}
+
+.chefs {
+  background: url("../images/team-bg.jpg");
+  background-size: cover;
+  padding: 100px;
+  text-align: center;
+  color: white;
+}
+.chefs h3 {
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 100px;
+}
+
+.chefs p {
+  margin-bottom: 100px;
+}
+
+.chefs .flexCenter div {
+  width: 300px;
+  margin: 0 20px;
+}
+
+.chefs .flexCenter div h4 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 50px;
+}
+.chefs .flexCenter div p {
+  color: darkgray;
+}

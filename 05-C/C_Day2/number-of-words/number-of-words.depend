@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1666875881 source:e:\iti\9months\c\c_day2\number-of-words\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+

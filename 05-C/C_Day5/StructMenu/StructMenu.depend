@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1667135095 source:e:\iti\9months\c\c_day5\structmenu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+

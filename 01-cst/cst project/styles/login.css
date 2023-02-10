@@ -1,0 +1,10 @@
+.login {
+  margin: 131px 500px;
+}
+.login input {
+  width: 100%;
+  margin: 10px 0;
+}
+.login button {
+  margin: 20px 0;
+}
