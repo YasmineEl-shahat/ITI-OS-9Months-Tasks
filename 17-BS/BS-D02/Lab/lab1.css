@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.registrationsection {
+  background: url(laptop_top.jpg) fixed;
+  background-position: center;
+  background-size: cover;
+  height: 98.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registrationsection > h2 {
+  align-self: center;
+  color: white;
+  font-size: 1.8em;
+  margin: 20px 0px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+.registrationsection > input {
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+span:not(.navbar-toggler-icon) {
+  background-color: rgb(239, 23, 127);
+  height: 30px;
+}
+.submit {
+  background-color: rgb(239, 23, 127);
+}
+h5 {
+  color: gray;
+}
+.img-icons {
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(212, 129, 66, 0.793);
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.img-card:hover ~ .img-icons,
+.img-icons:hover {
+  height: 4rem;
+  transform: translateY(-4rem);
+  padding: 1rem;
+  margin-bottom: -4rem;
+}
+.img-icons i {
+  font-size: 2em;
+  color: white;
+}
+.img-icons i:hover {
+  color: black;
+}
