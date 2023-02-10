@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1669999041 source:e:\iti\9months\09-cpp\lab3\main.cpp
+	<iostream>
+	<graphics.h>
+
+1669798394 source:e:\iti\9months\09-cpp\lab4\main.cpp
+	<iostream>
+	<string.h>
+

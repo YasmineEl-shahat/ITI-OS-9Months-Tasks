@@ -1,0 +1,2 @@
+multiple inheritence problem 
+public, protected, private inheritence differences
