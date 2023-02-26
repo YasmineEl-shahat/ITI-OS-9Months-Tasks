@@ -1,0 +1,17 @@
+1- create empty folder
+cmd ----> npm init
+cmd ----> npm init -y
+
+2- create app.js
+3- install your pakages
+
+    a- npm i express     --save  --> dsependinces
+    b- npm i morgan     --save-dev  --> dev-sependinces
+    c- npm i  nodemon  -g  --> global
+
+4- package.json
+
+//on run time deployment
+remove node_module
+host --> npm install dep, devDep
+host --> npm install --production dep.

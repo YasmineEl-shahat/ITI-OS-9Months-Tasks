@@ -1,0 +1,4 @@
+1- crud opertion --> for all collections
+2- autoIncrement for _id --> Type Number Class
+
+Bonus: bcrypt  package for password

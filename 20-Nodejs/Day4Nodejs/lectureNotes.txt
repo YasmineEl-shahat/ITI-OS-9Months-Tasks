@@ -1,0 +1,75 @@
+Sever
+1- web application :   no nedd for front end framework
+client http request -> reponse with HTML page
+2- RESTFUL API      : front End 
+clinet http request -->   response Data (JSON)
+
+
+RestFull API : set of rules reposne for requests 
+
+request :   endPiont(route) at server uri + httpverb
+example :  /departments get  -->  find all departments
+          /departments post  -->  add department
+          /departments patch  -->  update department
+sending data body :
+http body , headers (accept ,authorization) 
+
+repsone :   return JSON and status
+
+//---------------  MEAN
+MongoDB  server : http://localhost:27017
+BacakEnd Nodejs(Express) server : http://localhost:8080 (testing tool postman)
+FrontEnd Angular server : http://localhost:4000
+
+
+
+/*******************  Day3***********************/
+Routes(End points) and Validations 
+
+MVC design Pattern: 
+Model fOLDER :   Files schema DB (departmentSchema.js,studentSchema.js)
+Controller Folder :  Files crusd operations on schema (depstment.js , students.js)
+Routes Folder :    files routes (departmentRoutes.js )
+Views Folder  :     subFolders (department,students)
+
+
+End points
+
+1-
+/departmets get          --> get all departments
+/departments/add    post --> add
+/departments/update post --> update
+/departments/delete  post -->  delete
+
+2-
+/departments   get , post , patch, delete
+
+
+//--- send data from client to API
+
+1- Query String   /departments?id=2&name=x verbs : get,post,patch,delete
+2- Query parameters  /depetments/2/x        verbs: get , post ,patch,delete
+3- Body                             verbs : post , patch,delete
+
+
+/******************* Day4 **********************/
+DB connection
+//drive 
+//ODM MonogDB , //ORM Sequilize 
+//1- install mongoose
+2- setup connection (connection string)  inside app.js
+for every collection
+a- Modle Folder -> Schema for collection
+b- Model inside Controller 
+
+/******************* Day5 *********************/
+Authentication and Authorization
+
+Authentication : who are you?   login
+Authorization:  rights , persmission
+
+
+
+
+
+
