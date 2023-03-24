@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+          Hello {{name}}  , your pending tasks is <span class="bg-danger">{{getPendingTasksCount()}} </span>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" #inputTitle (keyup.enter)="add(inputTitle.value)" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary"  (click)="add(inputTitle.value)">Add</button>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let task of tasks;let currentIndex=index;">
+                    <th scope="row"> {{currentIndex+1}}</th>
+                    <td [class.done-task]="task.IsDone"> {{task.Title}} {{task.IsDone}}</td>
+                    <td>
+                        <input type="checkbox" [checked]="task.IsDone" (change)="update(task)">
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="delete(currentIndex)"> DELETE</button>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+      
+      </div>
+</div>

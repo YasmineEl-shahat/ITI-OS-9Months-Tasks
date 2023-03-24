@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students">
+        <td scope="row">{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>
+          <button (click)="ids = item.id">show details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-student-details [id]="ids"></app-student-details>
+{{ ids }}

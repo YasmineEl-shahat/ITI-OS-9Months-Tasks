@@ -1,0 +1,13 @@
+<div id="page" align="center">
+  <div id="content" style="width: 800px">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-side></app-side>
+    <p-rating [(ngModel)]="val" [cancel]="true"></p-rating>
+    <p-password></p-password>
+    <!-- <app-student></app-student> -->
+    <app-instructor-list></app-instructor-list>
+    <!-- <app-department-list></app-department-list> -->
+    <app-footer></app-footer>
+  </div>
+</div>

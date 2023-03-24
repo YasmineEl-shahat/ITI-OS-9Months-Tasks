@@ -1,0 +1,23 @@
+<div id="page" align="center">
+    <div id="content" style="width:800px">
+        <app-header></app-header>
+        <div id="contenttext">
+            <div style="padding:10px">
+                <span class="titletext">Welcome to RedTie!</span>
+                </div>
+                <div class="bodytext" style="padding:12px;" align="justify">
+                   
+                    <router-outlet></router-outlet>
+
+                    <!-- <p-rating [(ngModel)]="val" [cancel]="false"></p-rating>{{val}}
+                    <p-password [(ngModel)]="title"></p-password>{{title}}
+                    <p-chips [(ngModel)]="values"></p-chips>{{values}} -->
+
+
+
+            </div>
+        </div>
+        <app-side></app-side>
+        <app-footer></app-footer>
+        </div>
+</div>

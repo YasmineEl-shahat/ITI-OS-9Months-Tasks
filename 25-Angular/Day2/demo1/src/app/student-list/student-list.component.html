@@ -1,0 +1,51 @@
+
+
+
+
+<!-- <input [(ngModel)]="degree">
+<div *ngIf="degree>=60;else t1">
+    success {{degree}}
+</div>
+<ng-template #t1>
+    <div>
+        Fail{{degree}}
+    </div>
+</ng-template> -->
+<!-- <input type="text" [(ngModel)]="std.id">
+<input type="text" [(ngModel)]="std.name">
+<input type="text" [(ngModel)]="std.age">
+
+<button (click)="Add()">add</button> -->
+
+
+<app-add-student (onStudentSave)="Add($event)"></app-add-student>
+<div class="table-responsive">
+    <table class="">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of students">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>
+                    <button (click)="show(item.id)">Details</button>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+<!-- <div class="alert alert-danger" *ngIf="detailsflag">
+    {{stddetails.id}}
+    {{stddetails.name}}
+    {{stddetails.age}}:
+    <button (click)="detailsflag=false">hid</button>
+</div> -->
+<app-student-details [std]="stddetails" *ngIf="detailsflag" (onHide)="detailsflag=$event"></app-student-details>

@@ -1,0 +1,1 @@
+<span class="fa fa-star " *ngFor="let item of stars;let currentIndex=index" (click)="onRatingChanged(currentIndex+1)" [class.checked]="rate>currentIndex"></span>

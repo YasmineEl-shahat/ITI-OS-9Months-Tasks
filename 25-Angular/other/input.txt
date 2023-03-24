@@ -1,0 +1,12 @@
+<input type value class >
+
+export calss Input {
+@Input() type
+@Input() value
+@Input() class
+
+keyup
+keydown
+change
+
+}

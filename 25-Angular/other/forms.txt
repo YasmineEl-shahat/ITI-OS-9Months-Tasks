@@ -1,0 +1,5 @@
+
+1-import module ReactiveFormsModule
+2-inject service FormBuilder service at comp.
+3-define form group.
+4-controls + validation.

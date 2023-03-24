@@ -1,0 +1,36 @@
+<div id="logo">
+  <div style="margin-top: 70px" class="whitetitle">RedTie</div>
+</div>
+<div id="topheader">
+  <div align="left" class="bodytext">
+    <br />
+    <strong>Your Company Name</strong><br />
+    Evergreen Terrace 742<br />
+    Kansas Missouri<br />
+    Phone: 432-653-3121<br />
+    sales@thetiecompany.com
+  </div>
+  <div id="toplinks" class="smallgraytext">
+    <a href="#">Home</a> | <a href="#">Sitemap</a> | <a href="#">Contact Us</a>
+  </div>
+</div>
+<div id="menu">
+  <div align="right" class="smallwhitetext" style="padding: 9px">
+    <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Products</a> |
+    <a href="#">Our Services</a> | <a href="#">Contact Us</a>
+  </div>
+</div>
+<div id="submenu">
+  <div align="right" class="smallgraytext" style="padding: 9px">
+    <a href="#">Submenu 1</a> | <a href="#">Submenu 2</a> |
+    <a href="#">Submenu 3</a> | <a href="#">Submenu 4</a> |
+    <a href="#">Submenu 5</a> | <a href="#">Submenu 6</a>
+  </div>
+</div>
+<a routerLink="/home" routerLinkActive="active">Home | </a>
+<a routerLink="/contact" routerLinkActive="active">contat | </a>
+<!-- array will be used when our route has parameters -->
+<a [routerLink]="['/about']" routerLinkActive="active">about | </a>
+<a routerLink="/students" routerLinkActive="students">students |</a>
+<a routerLink="/departments" routerLinkActive="departments">departments</a>
+<br />

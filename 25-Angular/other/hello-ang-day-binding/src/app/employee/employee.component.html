@@ -1,0 +1,41 @@
+ <p>employee works!</p>
+
+<h1>My First Name is {{employee.firstName}}</h1>
+
+<input #inputFirstName type="text" (keyup.enter)="setFirstName(inputFirstName.value)" placeholder="Your First Name" value="{{employee.firstName}}">
+
+<h1>My Last Name is {{employee.lastName}}</h1>
+<input type="text" #inputLastName (keyup)="setLastName(inputLastName.value)"  placeholder="Your Last Name" [value]="employee.lastName">
+<br>
+<button type="button" (click)="setLastName(inputLastName.value)">Change Last Name</button>
+<h1>My Full Name is {{employee.firstName+' '+employee.lastName}}</h1>
+<h1>My Full Name is {{getFullName()}}</h1> 
+<input type="text" placeholder="First Name">
+<br>
+<input type="text" placeholder="Last Name">
+<br>
+<input type="number" placeholder="Age" [(ngModel)]="employee.age">
+
+<h1  [class.red-color]="employee.age>=10" [class.green-color]="employee.age<10" [class.italic-text]="employee.age<10" >Your age is {{employee.age}}</h1>
+<h1  [ngClass]="{'green-color italic-text': employee.age<10 , 'red-color':employee.age>=10}" >Your age is {{employee.age}}</h1>
+<h1 class="red-color" [hidden]="employee.age<10">Sorry your age above 10</h1>
+<h1 class="red-color" *ngIf="employee.age>=10" >Sorry your age above 10</h1>
+
+
+<br>
+<button>Add</button>
+<br>
+Students count is {{getStudentsCount()}}
+
+<table>
+    <tr>
+        <td>#</td>
+        <td>Name</td>
+
+    </tr>
+
+    <tr *ngFor="let item of courses;let currentIndex=index">
+        <td>{{currentIndex+1}}</td>
+        <td>{{item}}</td>
+    </tr>
+</table>

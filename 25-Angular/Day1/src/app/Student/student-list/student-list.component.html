@@ -1,0 +1,41 @@
+<app-add-student (onStudentSave)="add($event)"></app-add-student>
+<div class="table-responsive">
+  <table class="">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of students; let i = even"
+        [ngClass]="{ bgpink: i, bgyellow: !i }"
+      >
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>
+          <button (click)="show(item.id)">Details</button>
+        </td>
+        <td>
+          <button (click)="edit(item.id)">edit</button>
+        </td>
+        <td>
+          <button (click)="delete(item.id)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit-student
+  [std]="stddetails"
+  *ngIf="editflag"
+  (onStudentSave)="saveEdit($event)"
+></app-edit-student>
+<app-student-details
+  [std]="stddetails"
+  *ngIf="detailsflag"
+  (onHide)="detailsflag = $event"
+></app-student-details>
