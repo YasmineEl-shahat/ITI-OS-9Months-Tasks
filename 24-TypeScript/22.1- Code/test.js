@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var child2_model_1 = require("./classes/child2.model");
+var child1_model_1 = require("./classes/child1.model");
+var parent_model_1 = require("./classes/parent.model");
+var p = new parent_model_1.Parent();
+console.log(p.getType());
+var c1 = new child1_model_1.Child1();
+console.log(c1.getType());
+var c2 = new child2_model_1.Child2();
+console.log(c2.getType());
