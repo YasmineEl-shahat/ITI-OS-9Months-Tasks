@@ -1,0 +1,67 @@
+/* /why i can not set align-items:center; to video tag/ */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.counter {
+  display: flex;
+  height: 80vh;
+  width: 70vw;
+  justify-content: space-evenly;
+  border: 4px solid orange;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  margin: 30px auto 0px auto;
+  background: radial-gradient(closest-side, white, #d49a69);
+}
+
+.multivedioes {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  justify-content: space-evenly;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  padding: 20px;
+  width: 6vw;
+  background: radial-gradient(closest-side, white, orange);
+}
+
+.multivedioes > input {
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.multivedioes > input:hover {
+  transform: rotate(360deg);
+  transition: all 2s;
+  cursor: pointer;
+}
+
+.videocounter {
+  margin: auto 20px;
+  border: 4px solid yellow;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 1000px;
+}
+
+.videocounter > video {
+  width: 80%;
+  height: 80%;
+  padding: 60px;
+}
+
+.videocounter > video:hover {
+  transform: scale(1.2);
+  transition: all 2s;
+}

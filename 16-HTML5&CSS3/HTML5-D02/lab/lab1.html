@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="lab1.css" />
+    <title>task1</title>
+    <script>
+      function dispMain() {
+        let branches = document.querySelector("#branches").children;
+        for (let div of branches) {
+          for (let child of div.children) {
+            child.style.display = "none";
+          }
+        }
+        let main = document.querySelector("#main");
+        main.style.display = "block";
+      }
+      function hideMain() {
+        let branches = document.querySelector("#branches").children;
+        for (let div of branches) {
+          for (let child of div.children) {
+            child.style.display = "block";
+          }
+        }
+        document.querySelector("#main").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">ITI System</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Management</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="registrationsection">
+        <h2>Limited Opportunities</h2>
+        <h3>To Be One Of Our Team</h3>
+        <input type="button" value="Register" />
+      </section>
+      <section class="itilife">
+        <div class="imageofitilife">
+          <img src="3.jpeg" alt="two laptoptops image" />
+        </div>
+        <div class="itilifedetails">
+          <h4>Life in ITI</h4>
+          <ul>
+            <li>Events</li>
+            <li>Hakthons</li>
+            <li>Social Events</li>
+            <li>Outing</li>
+          </ul>
+        </div>
+      </section>
+      <section class="itiservicesdetails">
+        <div>
+          <img src="ser1.jpg" alt="" />
+          <h5>For More Details Click <a href="#">More</a></h5>
+        </div>
+        <div>
+          <img src="ser2.jpg" alt="" />
+          <h5>For More Details Click <a href="#">More</a></h5>
+        </div>
+        <div>
+          <img src="ser3.jpg" alt="" />
+          <h5>For More Details Click <a href="#">More</a></h5>
+        </div>
+      </section>
+      <section class="locationsection">
+        <div class="locationheader">
+          <h6>ITI Location</h6>
+          <p>ITI Main Location over all the country</p>
+        </div>
+        <div class="locationdetails">
+          <div class="locationmap">
+            <img src="2.PNG" alt="egypt map" />
+          </div>
+          <div class="branchescountainer">
+            <div class="arrowbtns">
+              <input type="button" /><i class="fas fa-angle-left"></i>
+              <input type="button" /><i class="fas fa-angle-right"></i>
+            </div>
+            <div id="branches" class="branches">
+              <div>
+                <p id="main">
+                  <i class="fas fa-map-marker-alt"></i>ITI-Smart Village
+                </p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI- Ismailia</p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-Mansoura</p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-Menofia</p>
+              </div>
+              <div>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-Assuit</p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-Aswan</p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-Minya</p>
+                <p><i class="fas fa-map-marker-alt"></i>ITI-New capital</p>
+              </div>
+            </div>
+            <ul class="disp-branches">
+              <li onclick="dispMain();">
+                <div>&#9632;</div>
+                Main Branch
+              </li>
+              <li onclick="hideMain();">
+                <div>&#9632;</div>
+                Branch
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="connection">
+        <p>CONTACT US</p>
+        <p>
+          <i class="far fa-dot-circle"></i> 28 Km Cairo / Alexandria Desert
+          Road, 6 October, B148, Egypt
+        </p>
+        <p><i class="fas fa-phone"></i> (+202) 353-55656</p>
+        <p><i class="far fa-envelope"></i> ITIinfo@iti.gov.eg</p>
+      </div>
+      <div class="socialmedia">
+        <p>FOLLOW US</p>
+        <input type="button" /><i class="fab fa-facebook-f"></i>
+        <input type="button" /><i class="fab fa-twitter"></i>
+        <input type="button" /><i class="fab fa-youtube"></i>
+      </div>
+    </footer>
+  </body>
+</html>

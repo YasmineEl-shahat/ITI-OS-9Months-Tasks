@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Map task</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- prettier-ignore -->
+            <h1 class="navbar__logo">
+                Map Task
+            </h1>
+        </nav>
+        <main class="container">
+            <section class="tabs">
+                <section class="tabs__indicators">
+                    <ul id="tabs-items">
+                        <li class="active">Display Map</li>
+                        <li>Detailed Information</li>
+                    </ul>
+                    <span id="indicator"></span>
+                </section>
+                <section class="tabs__pages">
+                    <section id="tabs-container">
+                        <section class="tabs__page">
+                            <div id="map-container"></div>
+                        </section>
+                        <section class="tabs__page" id="second-page"></section>
+                    </section>
+                </section>
+            </section>
+        </main>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLNC0LWdWOdlxsLDkI8yCtSONzWvjzvLM&libraries=geometry"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

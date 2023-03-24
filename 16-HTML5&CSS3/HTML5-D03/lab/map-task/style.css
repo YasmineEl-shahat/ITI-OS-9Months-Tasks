@@ -1,0 +1,152 @@
+:root {
+  --black: #333;
+  --black-opacity-mid: rgba(51, 51, 51, 0.7);
+  --black-opacity: rgba(51, 51, 51, 0.2);
+  --white: #fff;
+  --white-opacity-mid: rgba(255, 255, 255, 0.1);
+  --white-opacity: rgba(255, 255, 255, 0.2);
+  --purple: #673ab7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+  font-family: sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar styles */
+.navbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  background-color: var(--purple);
+}
+
+.navbar__logo {
+  font-size: 25px;
+}
+
+/* container styles */
+.container {
+  padding: 30px;
+  height: calc(100vh - 50px);
+}
+
+#map-container {
+  height: 100%;
+}
+
+/* tabs styles */
+.tabs {
+  height: 100%;
+}
+
+.tabs__indicators {
+  height: 50px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.tabs__indicators ul {
+  display: flex;
+  height: 100%;
+}
+
+.tabs__indicators ul li {
+  display: inline-block;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.tabs__indicators ul li:hover {
+  background-color: var(--white-opacity-mid);
+}
+
+.tabs__indicators ul li.active {
+  background-color: var(--white-opacity);
+}
+
+.tabs__indicators #indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 1px;
+  background-color: var(--purple);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.tabs__pages {
+  height: calc(100% - 60px);
+  overflow: hidden;
+  position: relative;
+}
+
+#tabs-container {
+  width: 100%;
+  transform: translateX(0);
+  height: 100%;
+  transition: transform 200ms ease;
+}
+
+.tabs__pages .tabs__page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tabs__pages .tabs__page:last-of-type {
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* table styles */
+.table {
+  border: 1px solid var(--white-opacity-mid);
+  width: calc(100% - 50px);
+}
+
+.table > .table__row:not(:last-of-type) {
+  border-bottom: 1px solid var(--white-opacity-mid);
+}
+
+.table__row {
+  display: flex;
+  align-items: center;
+}
+
+.table__row > p {
+  padding: 15px;
+}
+.table__row > p:first-of-type {
+  width: 150px;
+  text-align: center;
+  border-right: 1px solid var(--white-opacity-mid);
+}
+
+.table__row > p:last-of-type {
+  flex-basis: 100%;
+}

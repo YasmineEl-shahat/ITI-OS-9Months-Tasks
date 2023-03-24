@@ -1,0 +1,52 @@
+section {
+  display: flex;
+  background-color: yellow;
+  border: 2px solid black;
+  border-radius: 20px 0px;
+  justify-content: center;
+  height: 40vh;
+  width: 60vw;
+  padding: 40px;
+  margin: auto;
+  box-shadow: 2px 5px black;
+  align-items: center;
+}
+
+section > div {
+  border-radius: 20px 0px;
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+}
+
+.sum {
+  background-image: radial-gradient(closest-side, red, #706f6f);
+}
+
+.sum > div,
+.mul > div {
+  margin: 10px;
+}
+
+.sum > div > input,
+.mul > div > input {
+  width: 6vw;
+}
+
+.sum label,
+.mul label {
+  font: bolder 1em verdana;
+}
+
+.result {
+  border: none;
+  background-color: transparent;
+}
+
+.mul {
+  background-image: radial-gradient(closest-side, #6aeb6a, #706f6f);
+}

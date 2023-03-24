@@ -1,0 +1,317 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  height: 10vh;
+}
+
+header ul > li > a {
+  text-decoration: none;
+  color: #9c0707;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+header ul > li > a:hover {
+  color: #03658b;
+}
+
+.registrationsection {
+  background-image: url(laptop_top.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registrationsection > h2,
+.registrationsection > h3 {
+  align-self: center;
+  color: white;
+  font-size: 1.8em;
+  margin: 6px 0px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+.registrationsection > input {
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #0c62c1;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.itilife {
+  display: flex;
+  margin-top: 20px;
+  height: 60vh;
+}
+
+.imageofitilife {
+  width: 50%;
+}
+
+.imageofitilife > img {
+  width: 100%;
+  height: 100%;
+}
+
+.itilifedetails {
+  background-color: #c8c4c4;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.itilifedetails > h4 {
+  justify-self: start;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  font-family: inherit;
+  align-self: center;
+}
+
+.itilifedetails > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  margin-left: 10%;
+}
+
+.itilifedetails > ul > li {
+  justify-items: flex-end;
+  color: #9c0707;
+  font: bold 1rem Verdana;
+}
+
+.itiservicesdetails {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.itiservicesdetails > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.itiservicesdetails > div > img {
+  width: 14vw;
+  height: 18vh;
+  background-color: #011d01;
+}
+
+.itiservicesdetails > div > h5 {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.itiservicesdetails > div > h5 > a {
+  color: #5f145f;
+}
+
+.itiservicesdetails > div > h5 > a:active {
+  color: red;
+}
+
+.locationsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.locationheader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.locationheader > h6 {
+  color: #9c0707;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.locationheader > p {
+  color: #585757;
+  font-size: 1.2rem;
+}
+
+.locationdetails {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.locationmap {
+  width: 50%;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.locationmap > img {
+  width: 35vw;
+  height: 55vh;
+}
+
+.branchescountainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowbtns {
+  align-self: flex-end;
+  margin-right: 10%;
+}
+
+.arrowbtns > input {
+  border: none;
+}
+
+.fa-angle-left {
+  color: #969292;
+}
+
+.branches {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.branches > div {
+  width: 100%;
+  margin: 20px;
+}
+
+.branches > div > p {
+  color: #777676;
+  background-color: #d8d7d7;
+  width: 70%;
+  margin: 20px;
+  padding: 10px 15px;
+}
+
+.branches > div > p:hover {
+  color: #9c0707;
+}
+
+.branchescountainer > ul {
+  display: flex;
+  margin-left: 40px;
+  list-style: none;
+}
+
+.branchescountainer > ul > li {
+  margin: 0px 20px;
+  display: flex;
+}
+
+.branchescountainer > ul > li:first-child > div {
+  width: 4px;
+  height: 4px;
+  color: #9c0707;
+  padding-right: 15px;
+}
+
+.branchescountainer > ul > li > div {
+  width: 4px;
+  height: 4px;
+  color: #5a14dd;
+  padding-right: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #2f2e2e;
+  color: white;
+  height: 20vh;
+  align-items: center;
+}
+
+.connection > p {
+  color: #9c9c9c;
+  margin: 5px 0px;
+  width: 350px;
+}
+
+.connection > p:first-child {
+  font: bold 1rem Verdana;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.connection > i {
+  margin-right: 10px;
+  color: white;
+}
+
+.socialmedia > input {
+  border: none;
+  margin-top: 20px;
+}
+
+.socialmedia > p {
+  font: bold 1rem Verdana;
+  margin-left: 5px;
+  letter-spacing: 2px;
+}
+
+.socialmedia > i {
+  margin: 0px 5px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.fa-facebook-f {
+  color: blue;
+}
+
+.fa-twitter {
+  color: #4cb9f8;
+}
+
+.fa-youtube {
+  color: red;
+}
+.disp-branches {
+  cursor: pointer;
+}
