@@ -1,0 +1,392 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Superb eCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-30 12:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0\n"
+"X-Domain: superb-ecommerce"
+
+#: footer.php:46
+msgid " Superb WordPress Themes"
+msgstr ""
+
+#: footer.php:46
+msgid " | WordPress Theme by"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:233
+msgid ", "
+msgstr ""
+
+#: functions.php:112 functions.php:122 functions.php:132 functions.php:142
+#: functions.php:152 functions.php:162 functions.php:172
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/customizer.php:18 inc/customizer.php:266 inc/customizer.php:400
+#: inc/customizer.php:533 inc/customizer.php:637
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Background Colors"
+msgstr ""
+
+#: inc/customizer.php:462
+msgid "Blog Feed Settings"
+msgstr ""
+
+#: inc/customizer.php:290 inc/customizer.php:388 inc/customizer.php:721
+msgid "Border Color"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Border Colors"
+msgstr ""
+
+#: inc/customizer.php:198 inc/customizer.php:697
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/customizer.php:172
+msgid "Button Link"
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer.php:210 inc/customizer.php:580 inc/customizer.php:709
+msgid "Button Text Color"
+msgstr ""
+
+#: template-parts/content-single.php:31 template-parts/content.php:33
+#: template-parts/content-search.php:33
+msgid "By"
+msgstr ""
+
+#: inc/customizer.php:557 inc/customizer.php:662
+msgid "Byline Color"
+msgstr ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content.php:58 template-parts/content-search.php:58
+msgid "Continue reading"
+msgstr ""
+
+#: inc/customizer.php:450
+msgid "Copyright Text"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:270
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/customizer.php:344
+msgid "Footer Settings"
+msgstr ""
+
+#: functions.php:120
+msgid "Footer Widget (1)"
+msgstr ""
+
+#: functions.php:130
+msgid "Footer Widget (2)"
+msgstr ""
+
+#: functions.php:140
+msgid "Footer Widget (3)"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer.php:412
+msgid "Go to Top Color"
+msgstr ""
+
+#: inc/customizer.php:424
+msgid "Go to Top Hover Color"
+msgstr ""
+
+#: inc/customizer.php:17
+msgid "Header Settings"
+msgstr ""
+
+#: functions.php:150
+msgid "Header Widget (1)"
+msgstr ""
+
+#: functions.php:160
+msgid "Header Widget (2)"
+msgstr ""
+
+#: functions.php:170
+msgid "Header Widget (3)"
+msgstr ""
+
+#: inc/customizer.php:311 inc/customizer.php:355 inc/customizer.php:545
+#: inc/customizer.php:650
+msgid "Headline Color"
+msgstr ""
+
+#: inc/customizer.php:517
+msgid "Hide author name from byline"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "Hide header button on mobile"
+msgstr ""
+
+#: inc/customizer.php:243
+msgid "Hide header tagline on mobile"
+msgstr ""
+
+#: inc/customizer.php:502
+msgid "Hide Sidebar (Full Width)"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://superbthemes.com/"
+msgstr ""
+
+#: 404.php:26
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:253
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/customizer.php:278 inc/customizer.php:323 inc/customizer.php:377
+#: inc/customizer.php:685
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "Link Colors"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:240
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "Logo Color"
+msgstr ""
+
+#: inc/customizer.php:487
+msgid "Make Blog Feed 2-Column Design"
+msgstr ""
+
+#. Name of the theme
+msgid "Superb eCommerce"
+msgstr ""
+
+#: header.php:29
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer.php:255
+msgid "Navigation Settings"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/customizer.php:616
+msgid "Numeric Pagination Active Color"
+msgstr ""
+
+#: inc/customizer.php:604
+msgid "Numeric Pagination Color"
+msgstr ""
+
+#: template-parts/content-single.php:31 template-parts/content.php:33
+#: template-parts/content-search.php:33
+msgid "on"
+msgstr ""
+
+#. 1: title.
+#: comments.php:34
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid "Only show header image on front page"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Only show upper widgets on front page"
+msgstr ""
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#. Name of the template
+msgid "Page Builder Template"
+msgstr ""
+
+#: template-parts/content-single.php:46 template-parts/content.php:50
+#: template-parts/content-search.php:50
+msgid "Pages:"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:216
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:210
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:236
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/customizer.php:626
+msgid "Posts/Page Settings"
+msgstr ""
+
+#: functions.php:55
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer.php:592
+msgid "Read more link color"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/template-tags.php:75
+msgid "Related Post"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Replaces the copyright text in the footer."
+msgstr ""
+
+#. %s: search query.
+#: search.php:26
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/customizer.php:473
+msgid "Show Full Text"
+msgstr ""
+
+#: inc/customizer.php:436
+msgid "Show/Hide go to top"
+msgstr ""
+
+#: functions.php:110
+msgid "Sidebar"
+msgstr ""
+
+#: inc/customizer.php:298
+msgid "Sidebar Settings"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#. Author of the theme
+msgid "SuperbThemesCom, MetaSlider"
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:243
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/customizer.php:146
+msgid "Tagline"
+msgstr ""
+
+#: inc/customizer.php:185 inc/customizer.php:335 inc/customizer.php:366
+#: inc/customizer.php:568 inc/customizer.php:674
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Text Colors"
+msgstr ""
+
+#: inc/customizer.php:134
+msgid "Title"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Title Colors"
+msgstr ""
+
+#: footer.php:56
+msgid "To Top"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Upper Widgets"
+msgstr ""
