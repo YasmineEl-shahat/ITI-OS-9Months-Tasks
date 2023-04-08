@@ -1,16 +1,34 @@
-# This is a sample Python script.
+from register import register
+from login import login
+from activate_user import activate_user
+from projects import create_project, view_projects, search_projects, edit_project,delete_project
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def mainmenu():
+    print("welcom to crow funding app")
+    choice = input("for register choose r for login choose l, for activate a :")
 
+    if choice == 'l':
+        user = login()
+        if user:
+            print(f"welcome, {user['first_name']} {user['last_name']}")
+            choice = input ("create new project choose c, view use v, e edit, d delete, s search:")
+            if choice == 'c':
+                create_project(user)
+            elif choice == 'v':
+                view_projects()
+            elif choice == 's':
+                date = input('enter date of project')
+                search_projects(date)
+            elif choice == 'e':
+                project_id = int(input("enter project id"))
+                edit_project(project_id, user)
+            elif choice == 'd':
+                project_id = int(input("enter project id"))
+                delete_project(project_id, user)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    elif choice =='r':
+        register()
+    elif choice == 'a':
+        activate_user()
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+mainmenu()
