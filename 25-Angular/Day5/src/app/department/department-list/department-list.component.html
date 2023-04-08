@@ -1,0 +1,44 @@
+<router-outlet></router-outlet>
+departments table:
+<a class="btn btn-success" [routerLink]="['/departments/add']"
+  >Add department</a
+>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let item of departments">
+        <td scope="row">{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>
+          <!-- <button (click)="show(item.id)">show details</button> -->
+          <!-- <a [routerLink]="['/departments', 'details', item.id]">details</a> -->
+          <button (click)="departmentDetails(item.id)">details</button>
+        </td>
+        <td>
+          <button (click)="edit(item.id)">edit</button>
+        </td>
+        <td>
+          <button (click)="delete(item.id)">delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit-department
+  [dept]="editdept"
+  *ngIf="editflag"
+  (onDeptSave)="saveEdit($event)"
+></app-edit-department>
+<!-- <app-department-details
+  [id]="id"
+  *ngIf="detailsflag"
+  (onHide)="detailsflag = $event"
+></app-department-details> -->
+<!-- <app-add-department></app-add-department> -->

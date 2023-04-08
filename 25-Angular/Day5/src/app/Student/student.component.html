@@ -1,0 +1,41 @@
+<!-- {{ bdate | date : "fullDate" | titlecase }} -->
+
+<!-- ngModel: listen to onchange so it makes two way data binding for changing name
+The FormControl instance tracks the value, user interaction,
+and validation status of the control and keeps the view synced with the model.
+If used within a parent form, the directive also registers itself with the form as a child control.
+ -->
+<!-- <input type="text" [(ngModel)]="name" />{{ name | uppercase }}
+
+<input #fname type="text" [value]="name" (keyup)="name = fname.value" />{{
+  name | titlecase
+}}
+
+<button #b1 (click)="details(t1.innerText)">details</button>
+<input
+  #t1
+  type="text"
+  (blur)="display($event.target)"
+  (keyup.enter)="display($event.target)"
+/>
+
+<button (click)="show()">show</button>{{ num }}
+<div #d1 [innerText]="name"></div>
+
+<table border="2">
+  <tr>
+    <td>id</td>
+    <td>name</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="num">xyz</td>
+  </tr>
+</table>
+<input type="text" [value]="name" [disabled]="flag" />
+<img [src]="stdimg" [alt]="name" />
+
+<div>{{ name }} {{ 1 + 1 }}</div>
+
+<h1>age {{ age + 5 }} {{ myfun() }}</h1> -->
+<!-- <input type="text" [(ngModel)]="std.age" />
+{{ std.id }}:{{ std.name }}:{{ std.age }} -->

@@ -1,0 +1,4 @@
+<input [(ngModel)]="std.id" disabled />
+<input #name [value]="std.name" />
+<input #age [value]="std.age" />
+<button (click)="save(name.value, age.value)">save</button>

@@ -1,0 +1,9 @@
+<!-- <app-rate [rating]="1"></app-rate>
+<app-rate [rating]="2"></app-rate>
+<app-rate [rating]="3"></app-rate>
+<app-rate [rating]="4"></app-rate> -->
+<form #usersignup="ngForm">
+  <label for="">id</label>
+  <input type="text" [(ngModel)]="id" name="id" />
+</form>
+<button (click)="show(usersignup)">show</button>
