@@ -1,5 +1,0 @@
-1-import RouterModule >>@angular/router
-2-routes [{path >> component}]
-3-define router-outlet
-4-angular links
-5-pass parmeter from comp to another.
