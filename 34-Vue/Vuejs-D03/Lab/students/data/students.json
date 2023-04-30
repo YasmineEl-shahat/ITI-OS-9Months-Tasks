@@ -1,0 +1,49 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "city": "New York"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "city": "Chicago"
+    },
+    {
+      "id": 4,
+      "name": "Sarah Lee",
+      "city": "San Francisco"
+    },
+    {
+      "id": 5,
+      "name": "Tom Davis",
+      "city": "Seattle"
+    },
+    {
+      "id": 6,
+      "name": "Yasmine El-shahat",
+      "city": "mansoura"
+    },
+    {
+      "id": 11,
+      "name": "rawan",
+      "city": "kjjkh"
+    },
+    {
+      "id": 9,
+      "name": "Yasmine",
+      "city": "Cairo"
+    },
+    {
+      "id": 10,
+      "name": "rawan",
+      "city": "Cairo"
+    }
+  ]
+}
