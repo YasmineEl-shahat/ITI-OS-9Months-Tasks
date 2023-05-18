@@ -1,0 +1,5 @@
+@import "../../styles/abstracts/mixins.scss";
+.custom-card {
+  @include flexCenter;
+  color: white;
+}

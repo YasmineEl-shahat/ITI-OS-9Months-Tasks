@@ -1,0 +1,24 @@
+@import "../../styles/abstracts/mixins.scss";
+@import "../../styles/abstracts/variables.scss";
+body {
+  .projects {
+    margin-bottom: 10rem;
+    .orbit {
+      font-size: calc(1.8rem + 1.5vw);
+      color: $primary;
+      margin-bottom: 2rem;
+    }
+
+    p.paragraph {
+      font-weight: 600;
+      margin-bottom: 5rem;
+    }
+    text-align: center;
+    .cards-wrapper {
+      @include grid(1rem, 40rem, 20rem);
+      @include mQ(500px) {
+        @include grid(1rem, 20rem, 20rem);
+      }
+    }
+  }
+}

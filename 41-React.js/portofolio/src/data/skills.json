@@ -1,0 +1,32 @@
+[
+  {
+    "index": "1",
+    "name": "HTML5",
+    "level": "90%"
+  },
+  {
+    "index": "2",
+    "name": "CSS3",
+    "level": "90%"
+  },
+  {
+    "index": "3",
+    "name": "JavaScript",
+    "level": "80%"
+  },
+  {
+    "index": "4",
+    "name": "React",
+    "level": "70%"
+  },
+  {
+    "index": "5",
+    "name": "Vue.js",
+    "level": "60%"
+  },
+  {
+    "index": "6",
+    "name": "Angular",
+    "level": "50%"
+  }
+]

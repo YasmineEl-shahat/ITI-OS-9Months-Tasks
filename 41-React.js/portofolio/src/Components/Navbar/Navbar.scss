@@ -1,0 +1,163 @@
+@import "../../styles/abstracts/variables.scss";
+@import "../../styles/abstracts/mixins.scss";
+
+body {
+  .scrolled,
+  .mobileNavbar {
+    padding: 0px 0;
+    background-color: $backg;
+  }
+  .mobileNavbar {
+    .toggleIcon {
+      color: white;
+    }
+
+    .navCanvas {
+      height: 100vh;
+      width: 50%;
+      padding: 2rem 0;
+      background-color: $backg;
+      display: block;
+      .name {
+        @include centerX;
+        position: absolute;
+        font-size: 1.5em;
+      }
+      @include mQ(620px) {
+        width: 70%;
+      }
+      @include mQ(340px) {
+        width: 85%;
+      }
+      .gg-close {
+        box-sizing: border-box;
+        position: absolute;
+        right: 1em;
+        top: 1.1em;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 40px;
+      }
+
+      .gg-close::after,
+      .gg-close::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        transform: rotate(45deg);
+        border-radius: 5px;
+        top: 8px;
+        left: 1px;
+      }
+
+      .gg-close::after {
+        transform: rotate(-45deg);
+      }
+      ul {
+        margin-top: 4rem;
+      }
+      .mobileLink {
+        font-size: $smallFont;
+        line-height: $MediumLineSpacing;
+        // display: block;
+        display: inline-block;
+        padding-left: 1em;
+        color: white;
+        text-transform: capitalize;
+        &::after {
+          content: "";
+          display: block;
+          width: 0px;
+          margin: auto;
+          height: 3px;
+          background: transparent;
+          transition: width 0.2 ease, background 0.2 ease;
+        }
+      }
+      .activeMobileLink {
+        // background: #d33b522e;
+        font-weight: 700;
+        &::after {
+          width: 100%;
+          border-radius: 3px;
+          background: $primary;
+          transition: 1s;
+        }
+      }
+      .socials-wrapper {
+        position: absolute;
+        bottom: 1rem;
+        min-width: 100%;
+        hr {
+          margin: 1rem;
+        }
+        .socials {
+          @include flexCenter;
+          .social-icon {
+            margin: 0 3rem;
+            @include mQ(510px) {
+              margin: 0 1rem;
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .navbarContainer {
+    padding: 2rem 0;
+    position: sticky;
+    z-index: 200;
+    top: 0px;
+
+    div,
+    section {
+      @include flexBet;
+    }
+    .name {
+      .fname {
+        color: $primary;
+        margin-right: 0.5rem;
+      }
+      .lname {
+        color: white;
+      }
+    }
+    .navlinks {
+      color: white;
+      margin-right: 4rem;
+      margin-top: 0.9rem;
+      text-transform: capitalize;
+      transition: width 0.2 ease, font-weight 0.2 ease;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0px;
+        margin: auto;
+        height: 3px;
+        background: transparent;
+        transition: width 0.2 ease, background 0.2 ease;
+      }
+    }
+    .activeLink {
+      font-weight: 700;
+      &::after {
+        width: 100%;
+        border-radius: 3px;
+        background: $primary;
+        transition: 1s;
+      }
+    }
+  }
+}

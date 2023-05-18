@@ -1,0 +1,191 @@
+@import "../../styles/abstracts/mixins.scss";
+@import "../../styles/abstracts/variables.scss";
+body {
+  .banner {
+    position: relative;
+    top: -10rem;
+    padding: 20rem 0 15rem 0;
+    background-image: url("../../../public/hero-bg.jpeg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .socials,
+    .wrap {
+      @include flexBet;
+    }
+    .welcome {
+      color: white;
+      font-size: 3.2rem;
+      line-height: 3.7rem;
+    }
+    .name {
+      color: $primary;
+      font-size: 6.4rem;
+      line-height: 8.2rem;
+    }
+    .paragraph {
+      color: white;
+    }
+    .logo-wrapper {
+      .logo {
+        width: 60rem;
+        height: 60rem;
+        margin-right: 1rem;
+      }
+    }
+    .follow {
+      @include flexBet;
+      position: absolute;
+      right: -20rem;
+      top: 48rem;
+      transform: rotate(90deg);
+      color: $primary;
+      .socials {
+        margin: 0 1rem;
+        &::before {
+          content: "";
+          display: block;
+          width: 10rem;
+          margin-right: 2rem;
+          height: 1.5px;
+          background: $primary;
+        }
+        .arrow-banner {
+          width: 10rem;
+          height: 1.5px;
+          background: $primary;
+          margin-left: 2rem;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            border-color: $primary;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            height: 6px;
+            width: 6px;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 0;
+            top: -0.25rem;
+          }
+        }
+      }
+      .social-icon {
+        img {
+          transform: rotate(270deg);
+        }
+        &:not(:last-of-type) {
+          margin-right: 4rem;
+        }
+      }
+    }
+    @include mQ(1680px) {
+      .logo-wrapper {
+        .logo {
+          width: 50rem;
+          height: 50rem;
+        }
+      }
+      .follow {
+        top: 42rem;
+        .socials {
+          &::before {
+            width: 7rem;
+          }
+          .arrow-banner {
+            width: 7rem;
+          }
+        }
+      }
+    }
+
+    @include mQ(1380px) {
+      .welcome {
+        font-size: $MediumFont;
+        line-height: $smallLineSpacing;
+      }
+      .name {
+        font-size: 3.2rem;
+        line-height: 3.7rem;
+      }
+      .logo-wrapper {
+        .logo {
+          width: 40rem;
+          height: 40rem;
+        }
+      }
+      .follow {
+        top: 40rem;
+        .socials {
+          &::before {
+            width: 5rem;
+          }
+          .arrow-banner {
+            width: 5rem;
+          }
+        }
+        .social-icon {
+          &:not(:last-of-type) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+    @include mQ(1200px) {
+      .wrap {
+        @include flexCenter;
+        flex-direction: column-reverse;
+      }
+      .follow {
+        display: none;
+      }
+    }
+    @include mQ(510px) {
+      .welcome {
+        font-size: $smallFont;
+        line-height: 2rem;
+      }
+      .name {
+        font-size: $MediumFont;
+        line-height: $smallLineSpacing;
+      }
+      .paragraphContainer {
+        position: relative;
+        left: -1rem;
+      }
+      .logo-wrapper {
+        .logo {
+          width: 20rem;
+          height: 20rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .follow {
+        right: -14.5rem;
+        .social-icon {
+          img {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+    .paragraphContainer {
+      width: 80%;
+      @media screen and (min-width: 1301px) {
+        position: relative;
+        left: -5rem;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 50%;
+      }
+      @include mQ(510px) {
+        width: 90%;
+      }
+      button {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

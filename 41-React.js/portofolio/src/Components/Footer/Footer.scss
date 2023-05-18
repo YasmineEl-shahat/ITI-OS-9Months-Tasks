@@ -1,0 +1,33 @@
+@import "../../styles/abstracts/mixins.scss";
+@import "../../styles/abstracts/variables.scss";
+
+body {
+  .panel-footer {
+    background: $backg;
+    .image-container {
+      @include flexCenter;
+      flex-direction: column;
+      padding: 4rem;
+      .socials {
+        @include flexCenter;
+        flex-direction: row;
+        margin-top: 4rem;
+        .social-icon {
+          margin: 0 4rem;
+          @include mQ(510px) {
+            margin: 0 1.5rem;
+            img {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .copy {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 2rem 0;
+    }
+  }
+}
