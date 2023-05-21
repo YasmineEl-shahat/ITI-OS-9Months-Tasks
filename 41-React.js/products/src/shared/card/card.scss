@@ -1,0 +1,10 @@
+@import "../../styles/abstracts/mixins.scss";
+.custom-card {
+  @include flexCenter;
+  text-align: center;
+  img {
+    border-radius: 50%;
+    height: 20rem;
+    width: 80%;
+  }
+}

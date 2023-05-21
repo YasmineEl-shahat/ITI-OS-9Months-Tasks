@@ -1,0 +1,120 @@
+@import "./styles/abstracts/variables.scss";
+@import "./styles/abstracts/mixins.scss";
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: transparent;
+  padding: 0;
+  margin: 0;
+}
+html {
+  //typography
+  font-size: $GlobalFont;
+
+  body {
+    font-family: "Roboto";
+    color: $gray;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    .title {
+      color: $primary;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $primary;
+      border-radius: 6px;
+    }
+    .paragraph {
+      font-size: $MediumFont;
+      line-height: $MediumLineSpacing;
+    }
+    .info {
+      font-size: $smallFont;
+      line-height: $smallLineSpacing;
+    }
+    .Btn {
+      border-radius: $globalRadius;
+      background-color: $primary;
+      padding: 1rem 4rem;
+      color: #fff;
+      min-height: 40px;
+      &:hover {
+        color: #fff;
+      }
+    }
+    @include mQ(1110px) {
+      .paragraph {
+        font-size: $smallFont;
+        line-height: $smallLineSpacing;
+      }
+      .info {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+    @include mQ(510px) {
+      .paragraph {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    .mainContainer {
+      width: 82.39%;
+      margin: auto;
+    }
+    @include mQ(1300px) {
+      .mainContainer {
+        width: 88.39%;
+      }
+    }
+    @include mQ(992px) {
+      .mainContainer {
+        width: 90%;
+      }
+    }
+
+    pre {
+      font-size: $smallFont;
+      font-family: "Roboto";
+      white-space: pre-wrap; /* Since CSS 2.1 */
+      white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+      white-space: -pre-wrap; /* Opera 4-6 */
+      white-space: -o-pre-wrap; /* Opera 7 */
+      word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    input,
+    select,
+    textarea,
+    button,
+    datalist {
+      border: none;
+      background: none;
+    }
+
+    .invisible {
+      display: none;
+    }
+
+    .productsBtn {
+      @include centering;
+    }
+  }
+}
