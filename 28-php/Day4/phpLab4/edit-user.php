@@ -15,7 +15,8 @@
 
     // redirect to add form with errors and old data
     if($formerrors !== "[]"){
-        $redirect_url = "Location:add-userForm.php?errors={$formerrors}";
+        $id = $_GET['id'];
+        $redirect_url = "Location:edit-form.php?id={$id}&errors={$formerrors}";
         if ($oldvalues !== "[]"){
             $oldvalues = json_encode($oldvalues);
             $redirect_url .="&old={$oldvalues}";
