@@ -1,24 +1,14 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-// import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import TodoDetails from "./TodoDetaills";
-import Home from "./Home";
-
-const Stack = createStackNavigator();
-// const Tab = createBottomTabNavigator();
+import { Provider } from "react-redux";
+import Routes from "./Routes/Routes";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "./Redux/store";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="TodoDetails" component={TodoDetails} />
-      </Stack.Navigator>
-      {/* <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="TodoDetails" component={TodoDetails} />
-      </Tab.Navigator> */}
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Routes />
+      </PersistGate>
+    </Provider>
   );
 }

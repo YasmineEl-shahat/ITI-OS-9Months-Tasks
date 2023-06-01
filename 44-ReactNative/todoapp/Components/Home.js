@@ -1,67 +1,18 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Button,
-  TouchableOpacity,
-  Modal,
-} from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 
-import { useNavigation } from "@react-navigation/native";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import Form from "./Form";
+import Todos from "./Todos";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteTodo } from "../Redux/reducers/todosSlice";
 
 export default function Home() {
-  const [todos, setTodos] = useState([]);
-  const [todoTitle, setTodoTitle] = useState("");
-  const [todoDesc, setTodoDesc] = useState("");
   const [filterType, setFilterType] = useState("All");
-  const [deleteTodo, setDeleteTodo] = useState(null);
+  const [selectedTodo, setSelectedTodo] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-  const navigation = useNavigation();
 
-  useEffect(() => {
-    async function loadTodos() {
-      try {
-        const storedTodos = await AsyncStorage.getItem("todos");
-        if (storedTodos !== null) {
-          setTodos(JSON.parse(storedTodos));
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    loadTodos();
-  }, []);
-
-  useEffect(() => {
-    async function saveTodos() {
-      try {
-        await AsyncStorage.setItem("todos", JSON.stringify(todos));
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    saveTodos();
-  }, [todos]);
-
-  const addTodo = () => {
-    if (todoTitle === "") return;
-    setTodos([
-      ...todos,
-      { title: todoTitle, description: todoDesc, done: false },
-    ]);
-    setTodoTitle("");
-    setTodoDesc("");
-  };
-
-  const toggleTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].done = !newTodos[index].done;
-    setTodos(newTodos);
-  };
+  const todos = useSelector((state) => state.todos.todos);
+  const dispatch = useDispatch();
 
   const filterTodos = (type) => {
     setFilterType(type);
@@ -75,28 +26,16 @@ export default function Home() {
   });
 
   const deleteTodoConfirm = () => {
-    const newTodos = todos.filter((todo) => todo !== deleteTodo);
-    setTodos(newTodos);
-    setDeleteTodo(null);
+    const index = todos.indexOf(selectedTodo);
+    dispatch(deleteTodo(index));
+    setSelectedTodo(null);
     setModalVisible(false);
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>TODO APP</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Todo Title"
-        value={todoTitle}
-        onChangeText={(text) => setTodoTitle(text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Todo Description"
-        value={todoDesc}
-        onChangeText={(text) => setTodoDesc(text)}
-      />
-      <Button title="Add Todo" onPress={addTodo} />
+      <Form />
       <View style={styles.divider} />
       <View style={styles.filterButtons}>
         <TouchableOpacity
@@ -127,37 +66,11 @@ export default function Home() {
           <Text style={styles.filterButtonText}>Done</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.todosContainer}>
-        {filteredTodos.map((todo, index) => (
-          <View key={index} style={styles.todo}>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("TodoDetails", {
-                  title: todo.title,
-                  description: todo.description,
-                })
-              }
-              onLongPress={() => {
-                toggleTodo(index);
-              }}
-            >
-              <Text style={[styles.todoTitle, todo.done && styles.doneTodo]}>
-                {todo.title}
-              </Text>
-              <Text style={styles.todoDesc}>{todo.description}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.deleteIcon}
-              onPress={() => {
-                setDeleteTodo(todo);
-                setModalVisible(true);
-              }}
-            >
-              <MaterialIcons name="delete" size={24} color="#000" />
-            </TouchableOpacity>
-          </View>
-        ))}
-      </View>
+      <Todos
+        filteredTodos={filteredTodos}
+        setSelectedTodo={setSelectedTodo}
+        setModalVisible={setModalVisible}
+      />
       <Modal
         animationType="slide"
         transparent={true}
@@ -176,7 +89,7 @@ export default function Home() {
               <TouchableOpacity
                 style={[styles.modalButton, styles.cancelButton]}
                 onPress={() => {
-                  setDeleteTodo(null);
+                  setSelectedTodo(null);
                   setModalVisible(false);
                 }}
               >
@@ -209,14 +122,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 20,
   },
-  input: {
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 5,
-    padding: 10,
-    marginVertical: 10,
-    width: "100%",
-  },
+
   divider: {
     height: 1,
     backgroundColor: "#ccc",
@@ -243,30 +149,7 @@ const styles = StyleSheet.create({
   filterButtonText: {
     fontWeight: "bold",
   },
-  todosContainer: {
-    width: "100%",
-  },
-  todo: {
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 5,
-    padding: 10,
-    marginVertical: 5,
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    color: "#000",
-  },
-  todoTitle: {
-    fontWeight: "bold",
-    textDecorationLine: "none",
-  },
-  todoDesc: {
-    marginTop: 5,
-  },
-  doneTodo: {
-    textDecorationLine: "line-through",
-  },
+
   modalContainer: {
     flex: 1,
     justifyContent: "center",
@@ -308,9 +191,5 @@ const styles = StyleSheet.create({
   modalButtonText: {
     fontWeight: "bold",
     color: "#fff",
-  },
-  deleteIcon: {
-    position: "absolute",
-    right: 4,
   },
 });
