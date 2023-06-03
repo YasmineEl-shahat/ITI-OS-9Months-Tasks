@@ -4,15 +4,18 @@ import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 import Form from "./Form";
 import Todos from "./Todos";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTodo } from "../Redux/reducers/todosSlice";
+import { deleteTodo, getUserDetails } from "../Redux/reducers/todosSlice";
 
 export default function Home() {
   const [filterType, setFilterType] = useState("All");
   const [selectedTodo, setSelectedTodo] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
-  const todos = useSelector((state) => state.todos.todos);
+  const { todos } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserDetails(1));
+  }, []);
 
   const filterTodos = (type) => {
     setFilterType(type);
@@ -35,6 +38,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>TODO APP</Text>
+
       <Form />
       <View style={styles.divider} />
       <View style={styles.filterButtons}>
