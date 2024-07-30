@@ -1,2 +1,0 @@
-2023-03-30T13:30:37+00:00 CRITICAL Out of memory (allocated 44040192 bytes) (tried to allocate 49152 bytes) in C:\xampp\htdocs\ecommerce\wp-content\plugins\kadence-blocks\vendor\composer\ClassLoader.php on line 571
-

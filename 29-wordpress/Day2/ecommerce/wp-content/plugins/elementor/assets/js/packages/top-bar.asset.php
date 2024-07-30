@@ -1,2 +1,0 @@
-<?php
-if(!defined('ABSPATH')){exit;}return['handle'=>'elementor-packages-top-bar','deps'=>['elementor-packages-editor','elementor-packages-icons','elementor-packages-locations','elementor-packages-ui','react','wp-i18n',],];

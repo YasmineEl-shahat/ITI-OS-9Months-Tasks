@@ -1,5 +1,0 @@
-= 1.0.1 =
-* Bosa Elementor Addons for WooCommerce added to getting started action.
-
-= 1.0.0 =
-* Initial release.
